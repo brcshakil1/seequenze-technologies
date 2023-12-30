@@ -7,6 +7,7 @@ const Dashboard = () => {
   const [isCollapse, setIsCollapse] = useState(false);
   const [isShow, setIsShow] = useState(false);
   const [isMenuTrue, setIsMenuTrue] = useState(false);
+
   console.log(isCollapse);
   return (
     <div>

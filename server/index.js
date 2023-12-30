@@ -27,6 +27,29 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
+
+    // collections
+    const projectsCollection = client.db("seequenzeDB").collection("projects");
+
+    // Projects Routes
+    app.get("/api/v1/projects", async (req, res) => {
+      try {
+        const result = await projectsCollection.find().toArray();
+        res.send(result);
+      } catch (err) {
+        res.status(400).send;
+      }
+    });
+    app.post("/api/v1/create-projects", async (req, res) => {
+      try {
+        const project = req.body;
+        const result = await projectsCollection.insertOne(project);
+        res.send(result);
+      } catch (err) {
+        res.send(res.status(400).send);
+      }
+    });
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
