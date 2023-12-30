@@ -1,10 +1,9 @@
-import { NavLink } from "react-router-dom";
 import { BsDatabaseFill } from "react-icons/bs";
-import { PropTypes } from "prop-types";
+import { NavLink } from "react-router-dom";
 
-const Sidebar = ({ isCollapse, setIsCollapse }) => {
+const SidebarMobile = () => {
   return (
-    <div className="p-5 flex flex-col justify-between h-auto md:min-h-[88vh]">
+    <div>
       <div>
         <div className="border-t-2 border-b-2 py-7 px-4">
           <NavLink
@@ -12,9 +11,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
             className="flex items-center gap-2 mb-7 font-semibold text-[#C4C4C4]"
           >
             <BsDatabaseFill className="text-2xl " />
-            <li className={`${isCollapse ? "hidden" : "block"} list-none`}>
-              My Projects
-            </li>
+            <li className="list-none">My Projects</li>
           </NavLink>
           <NavLink
             to="sample-projects"
@@ -44,9 +41,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
                 fill="#C4C4C4"
               />
             </svg>
-            <li className={`${isCollapse ? "hidden" : "block"} list-none`}>
-              Sample Projects
-            </li>
+            <li className="list-none">Sample Projects</li>
           </NavLink>
         </div>
         <div className="px-4 py-7">
@@ -70,9 +65,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
                 fill="#C4C4C4"
               />
             </svg>
-            <li className={`${isCollapse ? "hidden" : "block"} list-none`}>
-              Apps
-            </li>
+            <li className="list-none">Apps</li>
           </NavLink>
           <NavLink
             to="my-projects"
@@ -102,88 +95,12 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
                 </clipPath>
               </defs>
             </svg>
-            <li className={`${isCollapse ? "hidden" : "block"} list-none`}>
-              Intro to Necleo
-            </li>
+            <li className="list-none">Intro to Necleo</li>
           </NavLink>
         </div>
-      </div>
-      <div className="px-4">
-        <NavLink
-          to="my-projects"
-          className="flex items-center gap-2 font-semibold text-[#C4C4C4] mb-7"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-          >
-            <path
-              d="M14 1.75C7.23516 1.75 1.75 7.23516 1.75 14C1.75 20.7648 7.23516 26.25 14 26.25C20.7648 26.25 26.25 20.7648 26.25 14C26.25 7.23516 20.7648 1.75 14 1.75ZM15.1047 19.6164C15.0773 20.5898 14.3555 21.1914 13.4203 21.1641C12.5234 21.1367 11.818 20.4969 11.8453 19.518C11.8727 18.5445 12.6164 17.9266 13.5133 17.9539C14.4539 17.9812 15.1375 18.643 15.1047 19.6164ZM17.768 12.6547C17.5383 12.9773 17.0242 13.393 16.3789 13.8961L15.6625 14.3883C15.3125 14.6562 15.0938 14.9734 14.9789 15.3344C14.9187 15.5258 14.875 16.0234 14.8641 16.357C14.8586 16.4227 14.8203 16.5703 14.618 16.5703C14.4156 16.5703 12.7039 16.5703 12.4797 16.5703C12.2555 16.5703 12.2281 16.4391 12.2336 16.3734C12.2664 15.4656 12.3977 14.7164 12.775 14.1148C13.2836 13.3055 14.7164 12.4523 14.7164 12.4523C14.9352 12.2883 15.1047 12.1133 15.2359 11.9219C15.4766 11.5938 15.6734 11.2273 15.6734 10.8336C15.6734 10.3797 15.5641 9.94766 15.2742 9.58672C14.9352 9.16563 14.5688 8.96328 13.8633 8.96328C13.1687 8.96328 12.7641 9.31328 12.4742 9.77266C12.1844 10.232 12.2336 10.7734 12.2336 11.2656H9.57031C9.57031 9.40625 10.057 8.21953 11.0852 7.51953C11.7797 7.04375 12.6656 6.83594 13.6992 6.83594C15.0555 6.83594 16.1328 7.0875 17.0844 7.80938C17.9648 8.47656 18.4297 9.41719 18.4297 10.6859C18.4297 11.468 18.1562 12.1242 17.768 12.6547Z"
-              fill="#C4C4C4"
-            />
-          </svg>
-          <li className={`${isCollapse ? "hidden" : "block"} list-none`}>
-            Apps
-          </li>
-        </NavLink>
-        <NavLink
-          to="my-projects"
-          className="flex items-center gap-2 font-semibold text-[#C4C4C4] my-7"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-          >
-            <g clipPath="url(#clip0_101_48)">
-              <path
-                d="M23.3334 2.33333H4.66671C3.37754 2.33333 2.34504 3.37749 2.34504 4.66666L2.33337 25.6667L7.00004 21H23.3334C24.6225 21 25.6667 19.9558 25.6667 18.6667V4.66666C25.6667 3.37749 24.6225 2.33333 23.3334 2.33333ZM15.1667 16.3333H12.8334V14H15.1667V16.3333ZM15.1667 11.6667H12.8334V7H15.1667V11.6667Z"
-                fill="#C4C4C4"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_101_48">
-                <rect width="28" height="28" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-          <li className={`${isCollapse ? "hidden" : "block"} list-none`}>
-            Intro to Necleo
-          </li>
-        </NavLink>
-        <button
-          onClick={() => setIsCollapse(!isCollapse)}
-          className="flex items-center gap-2 font-semibold text-black "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-          >
-            <path
-              d="M9.54941 14.7L10.9473 15.9232C11.2383 16.1778 11.2678 16.62 11.0132 16.911C10.7586 17.2019 10.3164 17.2313 10.0254 16.9768L7.22542 14.5268C7.07351 14.394 6.98637 14.2019 6.98637 14C6.98637 13.7982 7.07351 13.6061 7.22542 13.4732L10.0254 11.0232C10.3164 10.7686 10.7586 10.7981 11.0132 11.0891C11.2678 11.38 11.2383 11.8222 10.9473 12.0768L9.54938 13.3H14.7C15.0866 13.3 15.4 13.6134 15.4 14C15.4 14.3867 15.0866 14.7 14.7 14.7H9.54941ZM25.2001 19.6C25.2001 21.1464 23.9465 22.4 22.4001 22.4H5.60005C4.05365 22.4 2.80005 21.1464 2.80005 19.6V8.40001C2.80005 6.85361 4.05365 5.60001 5.60005 5.60001H22.4001C23.9465 5.60001 25.2001 6.85361 25.2001 8.40001V19.6ZM16.8 21V7.00001H5.60005C4.82686 7.00001 4.20005 7.6268 4.20005 8.40001V19.6C4.20005 20.3732 4.82686 21 5.60005 21H16.8Z"
-              fill="#212121"
-            />
-          </svg>
-          <li className={`${isCollapse ? "hidden" : "block"} list-none`}>
-            Collapse
-          </li>
-        </button>
       </div>
     </div>
   );
 };
 
-Sidebar.propTypes = {
-  isCollapse: PropTypes.bool,
-  setIsCollapse: PropTypes.func,
-};
-
-export default Sidebar;
+export default SidebarMobile;
