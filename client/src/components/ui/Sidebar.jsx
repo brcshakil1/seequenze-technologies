@@ -17,7 +17,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
             </li>
           </NavLink>
           <NavLink
-            to="sample-projects"
+            to="/sample-projects"
             className="flex items-center gap-2 font-semibold text-[#C4C4C4]"
           >
             <svg
@@ -51,7 +51,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
         </div>
         <div className="px-4 py-7">
           <NavLink
-            to="my-projects"
+            to="/my-projects"
             className="flex items-center gap-2 font-semibold text-[#C4C4C4] mb-7"
           >
             <svg
@@ -75,7 +75,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
             </li>
           </NavLink>
           <NavLink
-            to="my-projects"
+            to="/my-projects"
             className="flex items-center gap-2 font-semibold text-[#C4C4C4]"
           >
             <svg
