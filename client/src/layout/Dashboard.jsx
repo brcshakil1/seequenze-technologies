@@ -6,11 +6,13 @@ const Dashboard = () => {
   return (
     <div>
       <Navbar />
-      <div>
-        <Sidebar />
-      </div>
-      <div>
-        <Outlet />
+      <div className="flex">
+        <div className="w-1/4">
+          <Sidebar />
+        </div>
+        <div className="w-3/4 bg-[#F8F8F8]">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
