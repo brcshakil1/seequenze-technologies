@@ -1,4 +1,5 @@
 import { PropTypes } from "prop-types";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -13,9 +14,18 @@ const ProjectCard = ({ project }) => {
       <h3 className="font-semibold text-center pt-2.5">
         {project?.author ? project?.author : project?.projectName}
       </h3>
-      <p className="text-center text-[12px] ">
-        or try a <span className="text-[#FA782F]">sample project</span>
-      </p>
+      {project?.photo && (
+        <div className="grid place-items-center pt-1">
+          <Link to={`/project/${project?._id}`}>
+            <button
+              className="text-center text-[12px] text-white font-semibold 
+        rounded-full active:bg-[#fa792fe5] bg-[#FA782F] py-1 px-4"
+            >
+              Show Details
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

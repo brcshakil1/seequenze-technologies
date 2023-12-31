@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -40,6 +40,16 @@ async function run() {
         res.status(400).send;
       }
     });
+    app.get("/api/v1/projects/:id", async (req, res) => {
+      try {
+        const id = req.params.id;
+        const query = { _id: new ObjectId(id) };
+        const result = await projectsCollection.findOne(query);
+        res.send(result);
+      } catch (err) {
+        res.status(400).send;
+      }
+    });
     app.post("/api/v1/create-projects", async (req, res) => {
       try {
         const project = req.body;
@@ -47,6 +57,36 @@ async function run() {
         res.send(result);
       } catch (err) {
         res.send(res.status(400).send);
+      }
+    });
+
+    app.patch("/api/v1/update-project/:id", async (req, res) => {
+      try {
+        const id = req.params.id;
+        console.log(id);
+        const UpdatedProject = req.body;
+        const filter = { _id: new ObjectId(id) };
+        const updatedDoc = {
+          $set: {
+            photo: UpdatedProject?.photo,
+            projectName: UpdatedProject?.projectName,
+          },
+        };
+        const result = await projectsCollection.updateOne(filter, updatedDoc);
+        res.send(result);
+      } catch (err) {
+        res.status(400).send;
+      }
+    });
+
+    app.delete("/api/v1/delete-project/:id", async (req, res) => {
+      try {
+        const id = req.params.id;
+        const query = { _id: new ObjectId(id) };
+        const result = await projectsCollection.deleteOne(query);
+        res.send(result);
+      } catch (err) {
+        res.status(400).send;
       }
     });
 
