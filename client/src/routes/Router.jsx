@@ -4,11 +4,13 @@ import MyProjects from "../pages/Dashboard/MyProjects/MyProjects";
 import SampleProjects from "../pages/Dashboard/SampleProjects/SampleProjects";
 import ProjectDetails from "../pages/Dashboard/ProjectDetails/ProjectDetails";
 import Empty from "../pages/Dashboard/Empty/Empty";
+import Error from "../pages/Error/Error";
 
 const Router = createBrowserRouter([
   {
     path: "/",
     element: <Dashboard />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
