@@ -51,7 +51,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
         </div>
         <div className="px-4 py-7">
           <NavLink
-            to="/my-projects"
+            to="/apps"
             className="flex items-center gap-2 font-semibold text-[#C4C4C4] mb-7"
           >
             <svg
@@ -75,7 +75,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
             </li>
           </NavLink>
           <NavLink
-            to="/my-projects"
+            to="/intro"
             className="flex items-center gap-2 font-semibold text-[#C4C4C4]"
           >
             <svg
@@ -110,7 +110,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
       </div>
       <div className="px-4">
         <NavLink
-          to="my-projects"
+          to="/help"
           className="flex items-center gap-2 font-semibold text-[#C4C4C4] mb-7"
         >
           <svg
@@ -126,11 +126,11 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
             />
           </svg>
           <li className={`${isCollapse ? "hidden" : "block"} list-none`}>
-            Apps
+            Help & Support
           </li>
         </NavLink>
         <NavLink
-          to="my-projects"
+          to="/feedback"
           className="flex items-center gap-2 font-semibold text-[#C4C4C4] my-7"
         >
           <svg
@@ -153,7 +153,7 @@ const Sidebar = ({ isCollapse, setIsCollapse }) => {
             </defs>
           </svg>
           <li className={`${isCollapse ? "hidden" : "block"} list-none`}>
-            Intro to Necleo
+            Feedback
           </li>
         </NavLink>
         <button

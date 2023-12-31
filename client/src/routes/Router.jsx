@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MyProjects from "../pages/Dashboard/MyProjects/MyProjects";
 import SampleProjects from "../pages/Dashboard/SampleProjects/SampleProjects";
 import ProjectDetails from "../pages/Dashboard/ProjectDetails/ProjectDetails";
+import Empty from "../pages/Dashboard/Empty/Empty";
 
 const Router = createBrowserRouter([
   {
@@ -20,6 +21,23 @@ const Router = createBrowserRouter([
       {
         path: "/project/:id",
         element: <ProjectDetails />,
+      },
+      // All page are empty
+      {
+        path: "/apps",
+        element: <Empty />,
+      },
+      {
+        path: "/intro",
+        element: <Empty />,
+      },
+      {
+        path: "/help",
+        element: <Empty />,
+      },
+      {
+        path: "/feedback",
+        element: <Empty />,
       },
     ],
   },

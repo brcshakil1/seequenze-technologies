@@ -4,6 +4,8 @@ This is a Dashboard project
 
 # Live Link
 
+https://seequenze-client.web.app/
+
 ## Technologies used
 
 - Front-End: HTML, Tailwind, JS, React

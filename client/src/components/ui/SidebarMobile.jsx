@@ -46,7 +46,7 @@ const SidebarMobile = () => {
         </div>
         <div className="px-4 py-7">
           <NavLink
-            to="my-projects"
+            to="/help"
             className="flex items-center gap-2 font-semibold text-[#C4C4C4] mb-7"
           >
             <svg
@@ -68,7 +68,7 @@ const SidebarMobile = () => {
             <li className="list-none">Apps</li>
           </NavLink>
           <NavLink
-            to="my-projects"
+            to="/intro"
             className="flex items-center gap-2 font-semibold text-[#C4C4C4]"
           >
             <svg

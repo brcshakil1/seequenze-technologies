@@ -8,7 +8,6 @@ const Dashboard = () => {
   const [isShow, setIsShow] = useState(false);
   const [isMenuTrue, setIsMenuTrue] = useState(false);
 
-  console.log(isCollapse);
   return (
     <div>
       <Navbar
