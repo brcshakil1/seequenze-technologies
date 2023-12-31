@@ -46,9 +46,9 @@ const ProjectDetails = () => {
       {isPending ? (
         <Loading />
       ) : (
-        <div className="px-12">
+        <div className="px-5 md:px-12">
           <SectionTitle title="Projects Details" />
-          <div className="border-2 p-4 rounded-xl bg-white border-gray-400 flex flex-col lg:flex-row gap-10 items-center  h-[500px] my-10">
+          <div className="shadow-xl p-4 rounded-xl bg-white border-gray-400 flex flex-col lg:flex-row gap-10 items-center  h-[500px] my-10">
             <img
               src={project?.photo}
               className="md:w-[300px] h-full object-cover rounded-lg"
@@ -59,10 +59,10 @@ const ProjectDetails = () => {
                 Project Name: {project?.projectName}
               </h2>
               {/* button container */}
-              <div className="p-5">
+              <div className="flex justify-center items-center gap-4 py-4">
                 <button
                   onClick={() => setIsModal(!isModal)}
-                  className="btn btn-primary font-semibold mr-4"
+                  className="btn btn-primary font-semibold "
                 >
                   Update
                 </button>
