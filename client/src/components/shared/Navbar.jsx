@@ -19,7 +19,7 @@ const Navbar = ({ isShow, setIsShow, setIsMenuTrue, isMenuTrue }) => {
           } transition-all duration-500 absolute w-full 
           overflow-hidden block md:hidden bg-slate-200 shadow-xl z-10`}
         >
-          <SidebarMobile />
+          <SidebarMobile setIsMenuTrue={setIsMenuTrue} />
         </div>
         <img src={logo} alt="Necelo" />
         <div className="flex flex-row-reverse justify-between items-center  gap-3.5">

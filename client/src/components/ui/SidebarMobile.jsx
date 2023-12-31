@@ -1,20 +1,23 @@
 import { BsDatabaseFill } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
+import { PropTypes } from "prop-types";
 
-const SidebarMobile = () => {
+const SidebarMobile = ({ setIsMenuTrue }) => {
   return (
     <div>
       <div>
         <div className="border-t-2 border-b-2 py-7 px-4">
           <NavLink
             to="/"
+            onClick={() => setIsMenuTrue(false)}
             className="flex items-center gap-2 mb-7 font-semibold text-[#C4C4C4]"
           >
             <BsDatabaseFill className="text-2xl " />
             <li className="list-none">My Projects</li>
           </NavLink>
           <NavLink
-            to="sample-projects"
+            to="/sample-projects"
+            onClick={() => setIsMenuTrue(false)}
             className="flex items-center gap-2 font-semibold text-[#C4C4C4]"
           >
             <svg
@@ -46,7 +49,8 @@ const SidebarMobile = () => {
         </div>
         <div className="px-4 py-7">
           <NavLink
-            to="/help"
+            to="/apps"
+            onClick={() => setIsMenuTrue(false)}
             className="flex items-center gap-2 font-semibold text-[#C4C4C4] mb-7"
           >
             <svg
@@ -69,6 +73,7 @@ const SidebarMobile = () => {
           </NavLink>
           <NavLink
             to="/intro"
+            onClick={() => setIsMenuTrue(false)}
             className="flex items-center gap-2 font-semibold text-[#C4C4C4]"
           >
             <svg
@@ -101,6 +106,10 @@ const SidebarMobile = () => {
       </div>
     </div>
   );
+};
+
+SidebarMobile.propTypes = {
+  setIsMenuTrue: PropTypes.func,
 };
 
 export default SidebarMobile;

@@ -8,6 +8,7 @@ const Dashboard = () => {
   const [isShow, setIsShow] = useState(false);
   const [isMenuTrue, setIsMenuTrue] = useState(false);
 
+  console.log(isCollapse);
   return (
     <div>
       <Navbar
@@ -21,7 +22,7 @@ const Dashboard = () => {
           setIsShow(false);
           setIsMenuTrue(false);
         }}
-        className="flex flex-col md:flex-row "
+        className="min-h-screen  flex flex-col md:flex-row "
       >
         <div className={`hidden md:block ${isCollapse ? "w-auto" : "w-1/4"}`}>
           <Sidebar isCollapse={isCollapse} setIsCollapse={setIsCollapse} />
